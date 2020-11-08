@@ -2,13 +2,7 @@
 using AI.ComputerVision;
 using AI.HightLevelFunctions;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace TensorTest
@@ -20,7 +14,7 @@ namespace TensorTest
             InitializeComponent();
         }
 
-        Tensor tensor = new Tensor(2,2,3);
+        private Tensor tensor = new Tensor(2, 2, 3);
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -57,15 +51,15 @@ namespace TensorTest
         }
 
 
-        private void Decomposition() 
+        private void Decomposition()
         {
             Matrix[] chanels = tensor.TensorToMatrixs();
-            
+
             heatMapControl1.CalculateHeatMap(chanels[0]);
             heatMapControl2.CalculateHeatMap(chanels[1]);
             heatMapControl3.CalculateHeatMap(chanels[2]);
         }
 
-        
+
     }
 }

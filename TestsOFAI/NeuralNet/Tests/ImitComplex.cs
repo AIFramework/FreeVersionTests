@@ -9,13 +9,6 @@ using AI.ML.NeuralNetwork.CoreNNW.Loss;
 using AI.ML.NeuralNetwork.CoreNNW.Optimizers;
 using AI.Statistics;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NeuralNet.Tests
@@ -33,20 +26,23 @@ namespace NeuralNet.Tests
             {
                 t[i] = t[i - 1] + dt;
             }
-            NNW.AddNewLayer(new Shape(n), new ReShape(new Shape(n/2, 1,2)));
-            NNW.AddNewLayer(new FeedComplexLayer(12, new ReLU(0.1)));
-            NNW.AddNewLayer(new FeedForwardLayer(outp, new SigmoidUnit()));
+            NNW.AddNewLayer(new Shape(n), new FeedForwardLayer(200));
+            NNW.AddNewLayer(new ReShape(new Shape(100, 1, 2)));
+            NNW.AddNewLayer(new FeedComplexLayer(100, new EliotSigUnit()));
+            NNW.AddNewLayer(new FeedComplexLayer(100, new EliotSigUnit()));
+            NNW.AddNewLayer(new Flatten());
+            NNW.AddNewLayer(new FeedForwardLayer(outp, new SoftmaxUnit()));
+            Console.WriteLine(NNW);
         }
 
-        Vector t;
-        const int n = 130, outp = 3;
-        const int l = 200;
-        Random random = new Random(10);
-        NNW NNW = new NNW(20);
-        Vector ideal1 = new Vector(outp);
-        Vector ideal2 = new Vector(outp);
-
-        Vector[] x = new Vector[l], y = new Vector[l];
+        private readonly Vector t;
+        private const int n = 1000, outp = 2;
+        private const int l = 400;
+        private readonly Random random = new Random(10);
+        private readonly NNW NNW = new NNW(20);
+        private readonly Vector ideal1 = new Vector(outp);
+        private readonly Vector ideal2 = new Vector(outp);
+        private readonly Vector[] x = new Vector[l], y = new Vector[l];
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -56,31 +52,29 @@ namespace NeuralNet.Tests
         private void button2_Click(object sender, EventArgs e)
         {
             GetData();
-            DataSetNoReccurent complexDatasetNo = new DataSetNoReccurent(x, y, new LossMSE(),0.1);
+            DataSetNoReccurent complexDatasetNo = new DataSetNoReccurent(x, y, new LossMSE(), 0.1);
             Trainer trainer = new Trainer(new GraphCPU(), TrainType.Online, new Adam());
             trainer.Train(8, 0.001, NNW, complexDatasetNo, 0.0006);
         }
 
         private void ShDat()
         {
-            var dat = random.NextDouble() > 0.5 ? GetSig(2) : GetSig(4);
+            Vector dat = random.NextDouble() > 0.5 ? GetSig(2) : GetSig(4);
             GraphCPU graph = new GraphCPU(false);
-            var nnwOut = NNW.Activate(new NNValue(dat), graph).ToVector();
+            Vector nnwOut = NNW.Activate(new NNValue(dat), graph).ToVector();
 
             chartVisual1.PlotBlack(t, dat);
             chartVisual2.BarBlack(nnwOut);
         }
 
-
-
-        Vector GetSig(int f)
+        private Vector GetSig(int f)
         {
-            var s = Signal.Rect(t, 1, f, 0.5 * random.NextDouble());
-            s = (s - 0.5) * 2+Statistic.randNorm(n);
+            Vector s = Signal.Rect(t, 1, f, 2.5 * random.NextDouble());
+            s = (s - 0.5) * 2 + Statistic.randNorm(n);
             return s;
         }
 
-        void GetData()
+        private void GetData()
         {
             for (int i = 0; i < l; i += 2)
             {
