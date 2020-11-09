@@ -26,11 +26,12 @@ namespace NeuralNet.Tests
             {
                 t[i] = t[i - 1] + dt;
             }
+
             NNW.AddNewLayer(new Shape(n), new FeedForwardLayer(200));
-            NNW.AddNewLayer(new ReShape(new Shape(100, 1, 2)));
-            NNW.AddNewLayer(new FeedComplexLayer(100, new EliotSigUnit()));
-            NNW.AddNewLayer(new FeedComplexLayer(100, new EliotSigUnit()));
-            NNW.AddNewLayer(new Flatten());
+            NNW.AddNewLayer(new ReShape(new Shape(100, 1, 2))); // Разделение на реальную и мнимую часть
+            NNW.AddNewLayer(new FeedComplexLayer(100, new EliotSigUnit())); // Комплексный слой
+            NNW.AddNewLayer(new FeedComplexLayer(100, new EliotSigUnit()));// Комплексный слой
+            NNW.AddNewLayer(new Flatten()); // Соединение реальной и мнимой части
             NNW.AddNewLayer(new FeedForwardLayer(outp, new SoftmaxUnit()));
             Console.WriteLine(NNW);
         }
@@ -44,11 +45,13 @@ namespace NeuralNet.Tests
         private readonly Vector ideal2 = new Vector(outp);
         private readonly Vector[] x = new Vector[l], y = new Vector[l];
 
+        // Генерация тестового сигнала
         private void button1_Click(object sender, EventArgs e)
         {
             ShDat();
         }
 
+        // Обучение нейронной сети
         private void button2_Click(object sender, EventArgs e)
         {
             GetData();

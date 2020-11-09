@@ -32,15 +32,24 @@ namespace NeuralNet.Tests
         private const int n = 200, outp = 12;
         private const int l = 2000;
         private readonly Random random = new Random(10);
-        private readonly CNNW NNW = new CNNW(20);
+        private readonly CNNW NNW = new CNNW(20); //Комплексная нейросеть
         private readonly Vector ideal1 = new Vector(outp);
         private readonly Vector ideal2 = new Vector(outp);
         private readonly Vector[] x = new Vector[l], y = new Vector[l];
 
-
+        // Генерация сигнала
         private void button1_Click(object sender, EventArgs e)
         {
             ShDat();
+        }
+
+        // Обучение
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GetData();
+            ComplexDatasetNoRecurrent complexDatasetNo = new ComplexDatasetNoRecurrent(x, y, new ComplexMSE());
+            CTrainer trainer = new CTrainer(new CGraphCPU(), TrainType.Online, new CSGD(0.6));
+            trainer.Train(8, 0.01, NNW, complexDatasetNo, 0);
         }
 
         private void ShDat()
@@ -73,13 +82,6 @@ namespace NeuralNet.Tests
             }
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            GetData();
-            ComplexDatasetNoRecurrent complexDatasetNo = new ComplexDatasetNoRecurrent(x, y, new ComplexMSE());
-            CTrainer trainer = new CTrainer(new CGraphCPU(), TrainType.Online, new CSGD(0.6));
-            trainer.Train(8, 0.01, NNW, complexDatasetNo, 0);
-
-        }
+        
     }
 }

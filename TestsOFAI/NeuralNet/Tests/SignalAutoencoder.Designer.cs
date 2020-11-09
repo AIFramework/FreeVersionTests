@@ -51,9 +51,9 @@
             this.sigChart.IsShowXY = true;
             this.sigChart.LabelX = "Ось Х";
             this.sigChart.LabelY = "Ось Y";
-            this.sigChart.Location = new System.Drawing.Point(13, 13);
+            this.sigChart.Location = new System.Drawing.Point(-1, 0);
             this.sigChart.Name = "sigChart";
-            this.sigChart.Size = new System.Drawing.Size(687, 162);
+            this.sigChart.Size = new System.Drawing.Size(693, 162);
             this.sigChart.TabIndex = 0;
             // 
             // hChart
@@ -70,9 +70,9 @@
             this.hChart.IsShowXY = true;
             this.hChart.LabelX = "Ось Х";
             this.hChart.LabelY = "Ось Y";
-            this.hChart.Location = new System.Drawing.Point(13, 181);
+            this.hChart.Location = new System.Drawing.Point(-1, 168);
             this.hChart.Name = "hChart";
-            this.hChart.Size = new System.Drawing.Size(687, 170);
+            this.hChart.Size = new System.Drawing.Size(693, 170);
             this.hChart.TabIndex = 0;
             // 
             // outChart
@@ -89,14 +89,14 @@
             this.outChart.IsShowXY = true;
             this.outChart.LabelX = "Ось Х";
             this.outChart.LabelY = "Ось Y";
-            this.outChart.Location = new System.Drawing.Point(13, 357);
+            this.outChart.Location = new System.Drawing.Point(-1, 344);
             this.outChart.Name = "outChart";
-            this.outChart.Size = new System.Drawing.Size(687, 185);
+            this.outChart.Size = new System.Drawing.Size(693, 185);
             this.outChart.TabIndex = 0;
             // 
             // creatLin
             // 
-            this.creatLin.Location = new System.Drawing.Point(13, 549);
+            this.creatLin.Location = new System.Drawing.Point(-1, 532);
             this.creatLin.Name = "creatLin";
             this.creatLin.Size = new System.Drawing.Size(137, 23);
             this.creatLin.TabIndex = 1;
@@ -106,7 +106,7 @@
             // 
             // creatConv
             // 
-            this.creatConv.Location = new System.Drawing.Point(13, 578);
+            this.creatConv.Location = new System.Drawing.Point(-1, 561);
             this.creatConv.Name = "creatConv";
             this.creatConv.Size = new System.Drawing.Size(137, 23);
             this.creatConv.TabIndex = 1;
@@ -116,7 +116,7 @@
             // 
             // train
             // 
-            this.train.Location = new System.Drawing.Point(183, 548);
+            this.train.Location = new System.Drawing.Point(169, 531);
             this.train.Name = "train";
             this.train.Size = new System.Drawing.Size(75, 23);
             this.train.TabIndex = 2;
@@ -126,7 +126,7 @@
             // 
             // test
             // 
-            this.test.Location = new System.Drawing.Point(183, 579);
+            this.test.Location = new System.Drawing.Point(169, 562);
             this.test.Name = "test";
             this.test.Size = new System.Drawing.Size(75, 23);
             this.test.TabIndex = 2;
@@ -139,7 +139,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(704, 614);
+            this.ClientSize = new System.Drawing.Size(687, 587);
             this.Controls.Add(this.test);
             this.Controls.Add(this.train);
             this.Controls.Add(this.creatConv);
@@ -148,7 +148,10 @@
             this.Controls.Add(this.hChart);
             this.Controls.Add(this.sigChart);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "SignalAutoencoder";
+            this.ShowIcon = false;
             this.Text = "SignalAutoencoder";
             this.ResumeLayout(false);
 

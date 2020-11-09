@@ -38,41 +38,43 @@
             // 
             this.chartVisual1.AutoScroll = true;
             this.chartVisual1.BackColor = System.Drawing.Color.White;
-            this.chartVisual1.ChartName = "График";
+            this.chartVisual1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chartVisual1.ChartName = "Вход сети";
             this.chartVisual1.ForeColor = System.Drawing.Color.Black;
             this.chartVisual1.IsContextMenu = true;
             this.chartVisual1.IsLogScale = false;
             this.chartVisual1.IsMoove = true;
             this.chartVisual1.IsScale = true;
             this.chartVisual1.IsShowXY = true;
-            this.chartVisual1.LabelX = "Ось Х";
-            this.chartVisual1.LabelY = "Ось Y";
-            this.chartVisual1.Location = new System.Drawing.Point(13, 13);
+            this.chartVisual1.LabelX = "Время";
+            this.chartVisual1.LabelY = "Амплитуда";
+            this.chartVisual1.Location = new System.Drawing.Point(-1, 0);
             this.chartVisual1.Name = "chartVisual1";
-            this.chartVisual1.Size = new System.Drawing.Size(1033, 302);
+            this.chartVisual1.Size = new System.Drawing.Size(638, 243);
             this.chartVisual1.TabIndex = 0;
             // 
             // chartVisual2
             // 
             this.chartVisual2.AutoScroll = true;
             this.chartVisual2.BackColor = System.Drawing.Color.White;
-            this.chartVisual2.ChartName = "График";
+            this.chartVisual2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.chartVisual2.ChartName = "Выход сети";
             this.chartVisual2.ForeColor = System.Drawing.Color.Black;
             this.chartVisual2.IsContextMenu = true;
             this.chartVisual2.IsLogScale = false;
             this.chartVisual2.IsMoove = true;
             this.chartVisual2.IsScale = true;
             this.chartVisual2.IsShowXY = true;
-            this.chartVisual2.LabelX = "Ось Х";
-            this.chartVisual2.LabelY = "Ось Y";
-            this.chartVisual2.Location = new System.Drawing.Point(12, 347);
+            this.chartVisual2.LabelX = "Индекс класса";
+            this.chartVisual2.LabelY = "Активация";
+            this.chartVisual2.Location = new System.Drawing.Point(-1, 249);
             this.chartVisual2.Name = "chartVisual2";
-            this.chartVisual2.Size = new System.Drawing.Size(1034, 302);
+            this.chartVisual2.Size = new System.Drawing.Size(639, 217);
             this.chartVisual2.TabIndex = 1;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(13, 692);
+            this.button1.Location = new System.Drawing.Point(0, 472);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -82,7 +84,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(94, 692);
+            this.button2.Location = new System.Drawing.Point(87, 472);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -94,11 +96,15 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1077, 727);
+            this.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ClientSize = new System.Drawing.Size(635, 497);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.chartVisual2);
             this.Controls.Add(this.chartVisual1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "ComplexNet";
             this.Text = "ComplexNet";
             this.ResumeLayout(false);
