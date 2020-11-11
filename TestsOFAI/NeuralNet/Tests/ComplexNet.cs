@@ -7,7 +7,15 @@ using AI.ML.ComplexNet.Loss;
 using AI.ML.ComplexNet.Opts;
 using AI.ML.Datasets;
 using AI.ML.NeuralNetwork.CoreNNW;
+using AI.Statistics;
 using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace NeuralNet.Tests
@@ -25,49 +33,46 @@ namespace NeuralNet.Tests
             {
                 t[i] = t[i - 1] + dt;
             }
-            NNW.AddNewLayer(new Shape(n), new ComplexFeedForwardLayer(outp, new CLinearUnit()));
+            NNW.AddNewLayer(new Shape(n), new ComplexFeedForwardLayer(20, new CLinearUnit()));
+            NNW.AddNewLayer(new ComplexFeedForwardLayer(10, new CLinearUnit()));
+            NNW.AddNewLayer(new ComplexFeedForwardLayer(outp, new CLinearUnit()));
         }
 
-        private readonly Vector t;
-        private const int n = 200, outp = 12;
-        private const int l = 2000;
-        private readonly Random random = new Random(10);
-        private readonly CNNW NNW = new CNNW(20); //Комплексная нейросеть
-        private readonly Vector ideal1 = new Vector(outp);
-        private readonly Vector ideal2 = new Vector(outp);
-        private readonly Vector[] x = new Vector[l], y = new Vector[l];
+        Vector t;
+        private const int n = 1000, outp = 2;
+        private const int l = 400;
+        Random random = new Random(10);
+        CNNW NNW = new CNNW(20);
+        Vector ideal1 = new Vector(outp);
+        Vector ideal2 = new Vector(outp);
 
-        // Генерация сигнала
+        Vector[] x = new Vector[l], y = new Vector[l];
+
+
         private void button1_Click(object sender, EventArgs e)
         {
             ShDat();
         }
 
-        // Обучение
-        private void button2_Click(object sender, EventArgs e)
-        {
-            GetData();
-            ComplexDatasetNoRecurrent complexDatasetNo = new ComplexDatasetNoRecurrent(x, y, new ComplexMSE());
-            CTrainer trainer = new CTrainer(new CGraphCPU(), TrainType.Online, new CSGD(0.6));
-            trainer.Train(8, 0.01, NNW, complexDatasetNo, 0);
-        }
-
         private void ShDat()
         {
-            Vector dat = random.NextDouble() > 0.5 ? GetSig(2) : GetSig(4);
+            var dat = random.NextDouble() > 0.5 ? GetSig(2) : GetSig(4);
             CGraphCPU graph = new CGraphCPU(false);
-            ComplexVector nnwOut = NNW.Activate(new NNComplexValue(dat), graph).ToComplexVector();
+            var nnwOut = NNW.Activate(new NNComplexValue(dat), graph).ToComplexVector();
 
             chartVisual1.PlotBlack(t, dat);
             chartVisual2.PlotComplex(nnwOut);
         }
 
+
+
         private Vector GetSig(int f)
         {
-            Vector s = Signal.Rect(t, 1, f, 0.5 * random.NextDouble());
-            s = (s - 0.5) * 2;
+            Vector s = Signal.Rect(t, 1, f, 2.5 * random.NextDouble());
+            s = (s - 0.5) * 2 + Statistic.randNorm(n);
             return s;
         }
+
 
         private void GetData()
         {
@@ -82,6 +87,13 @@ namespace NeuralNet.Tests
             }
         }
 
-        
+        private void button2_Click(object sender, EventArgs e)
+        {
+            GetData();
+            ComplexDatasetNoRecurrent complexDatasetNo = new ComplexDatasetNoRecurrent(x, y, new ComplexMSE(), 0.1);
+            CTrainer trainer = new CTrainer(new CGraphCPU(), TrainType.Online, new CSGD(0.6));
+            trainer.Train(8, 0.0005, NNW, complexDatasetNo, 0.0006);
+
+        }
     }
 }
