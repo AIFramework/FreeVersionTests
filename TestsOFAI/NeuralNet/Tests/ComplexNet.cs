@@ -1,10 +1,10 @@
 ﻿using AI;
 using AI.DSPCore;
-using AI.ML.ComplexNet;
-using AI.ML.ComplexNet.Activations;
-using AI.ML.ComplexNet.Layers;
-using AI.ML.ComplexNet.Loss;
-using AI.ML.ComplexNet.Opts;
+using AI.ML.NeuralNetwork.ComplexNet;
+using AI.ML.NeuralNetwork.ComplexNet.Activations;
+using AI.ML.NeuralNetwork.ComplexNet.Layers;
+using AI.ML.NeuralNetwork.ComplexNet.Loss;
+using AI.ML.NeuralNetwork.ComplexNet.Opts;
 using AI.ML.Datasets;
 using AI.ML.NeuralNetwork.CoreNNW;
 using AI.Statistics;
@@ -33,8 +33,7 @@ namespace NeuralNet.Tests
             {
                 t[i] = t[i - 1] + dt;
             }
-            NNW.AddNewLayer(new Shape(n), new ComplexFeedForwardLayer(20, new CLinearUnit()));
-            NNW.AddNewLayer(new ComplexFeedForwardLayer(10, new CLinearUnit()));
+            NNW.AddNewLayer(new Shape(n), new ComplexFeedForwardLayer(20, new CSigmoidUnit()));
             NNW.AddNewLayer(new ComplexFeedForwardLayer(outp, new CLinearUnit()));
         }
 
@@ -92,7 +91,8 @@ namespace NeuralNet.Tests
             GetData();
             ComplexDatasetNoRecurrent complexDatasetNo = new ComplexDatasetNoRecurrent(x, y, new ComplexMSE(), 0.1);
             CTrainer trainer = new CTrainer(new CGraphCPU(), TrainType.Online, new CSGD(0.6));
-            trainer.Train(8, 0.0005, NNW, complexDatasetNo, 0.0006);
+            trainer.GradientClipValue = 0.5; // Клиппинг
+            trainer.Train(16, 0.01, NNW, complexDatasetNo, 0.0006);
 
         }
     }

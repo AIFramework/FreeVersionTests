@@ -27,17 +27,19 @@ namespace NeuralNet.Tests
                 t[i] = t[i - 1] + dt;
             }
 
-            NNW.AddNewLayer(new Shape(n), new FeedForwardLayer(20));
+            NNW.AddNewLayer(new Shape(n), new FeedForwardLayer(100, new ReLU(0.1)));
             NNW.AddNewLayer(new ReShape(new Shape(10, 1, 2))); // Разделение на реальную и мнимую часть
-            NNW.AddNewLayer(new FeedComplexLayer(10));// Комплексный слой
+            NNW.AddNewLayer(new BatchReNormalization());
+            NNW.AddNewLayer(new FeedComplexLayer(900, new EliotSigUnit()));// Комплексный слой
+            NNW.AddNewLayer(new DropOut(0.9));
             NNW.AddNewLayer(new Flatten()); // Соединение реальной и мнимой части
-            NNW.AddNewLayer(new FeedForwardLayer(outp));
+            NNW.AddNewLayer(new FeedForwardLayer(outp, new SoftmaxUnit()));
             Console.WriteLine(NNW);
         }
 
         private readonly Vector t;
         private const int n = 1000, outp = 2;
-        private const int l = 400;
+        private const int l = 500;
         private readonly Random random = new Random(10);
         private readonly NNW NNW = new NNW(20);
         private readonly Vector ideal1 = new Vector(outp);
@@ -54,9 +56,9 @@ namespace NeuralNet.Tests
         private void button2_Click(object sender, EventArgs e)
         {
             GetData();
-            DataSetNoReccurent DatasetNo = new DataSetNoReccurent(x, y, new LossMSE(), 0.1);
-            Trainer trainer = new Trainer(new GraphCPU(), TrainType.Online, new SGD(0.6));
-            trainer.Train(8, 0.0005, NNW, DatasetNo, 0.0006);
+            DataSetNoReccurent DatasetNo = new DataSetNoReccurent(x, y, new LossMSE(), 0.4);
+            Trainer trainer = new Trainer(new GraphCPU(), TrainType.Online, new Adam());
+            trainer.Train(8, 0.001, NNW, DatasetNo, 0.0006);
         }
 
         private void ShDat()
@@ -71,8 +73,8 @@ namespace NeuralNet.Tests
 
         private Vector GetSig(int f)
         {
-            Vector s = Signal.Rect(t, 1, f, 2.5 * random.NextDouble());
-            s = (s - 0.5) * 2 + Statistic.randNorm(n);
+            Vector s = Signal.Rect(t, 1, f, 4 * random.NextDouble());
+            s = (s - 0.5) * 2 + 1.5*Statistic.randNorm(n);
             return s;
         }
 

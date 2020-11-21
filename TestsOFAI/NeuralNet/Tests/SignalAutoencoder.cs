@@ -31,7 +31,7 @@ namespace NeuralNet.Tests
 
         private NeuralNetworkMeneger networkMeneger;
         private NNW nnw = new NNW();
-        private readonly int n = 128, h = 25, dataSempleCount = 3000;
+        private readonly int n = 512, h = 25, dataSempleCount = 300;
         private bool lin = true; // тип автокодировщика
 
 
@@ -57,19 +57,22 @@ namespace NeuralNet.Tests
 
 
             nnw = new NNW();
-            nnw.AddNewLayer(new Shape(n), new Conv1D(3, 2, new ReLU(0.1)));
+            nnw.AddNewLayer(new Shape(n), new Conv1D(3, 8, new ReLU(0.1)));
             nnw.AddNewLayer(new MaxPool1D());
-            nnw.AddNewLayer(new Conv1D(3, 4, new ReLU(0.1)));
+            nnw.AddNewLayer(new Conv1D(3, 16, new ReLU(0.1)));
             nnw.AddNewLayer(new MaxPool1D());
-            nnw.AddNewLayer(new Conv1D(3, 8, new ReLU(0.1)));
+            nnw.AddNewLayer(new Conv1D(3, 16, new ReLU(0.1)));
             nnw.AddNewLayer(new MaxPool1D());
             nnw.AddNewLayer(new Flatten());
 
             nnw.AddNewLayer(new FeedForwardLayer(h));
-            nnw.AddNewLayer(new FeedForwardLayer(32, new ReLU(0.1)));
+            nnw.AddNewLayer(new FeedForwardLayer(64, new ReLU(0.1)));
+            
 
             nnw.AddNewLayer(new UpSampling1D());
-            nnw.AddNewLayer(new Conv1D(3, 3, new ReLU(0.1)) { IsSame = true });
+            nnw.AddNewLayer(new Conv1D(3, 32, new ReLU(0.1)) { IsSame = true });
+            nnw.AddNewLayer(new UpSampling1D());
+            nnw.AddNewLayer(new Conv1D(3, 16, new ReLU(0.1)) { IsSame = true });
             nnw.AddNewLayer(new UpSampling1D());
             nnw.AddNewLayer(new Conv1D(3, 1, new LinearUnit()) { IsSame = true });
 
@@ -94,7 +97,10 @@ namespace NeuralNet.Tests
             try
             {
                 GenDataset();
-                networkMeneger.Epoch = 20;
+                networkMeneger.Epoch = 10;
+                networkMeneger.BatchSize = 8;
+                networkMeneger.LearningRate = 0.005;
+                networkMeneger.TrType = TrainType.MiniBatch;
                 networkMeneger.TrainNet(x, y);
                 ShowData();
             }

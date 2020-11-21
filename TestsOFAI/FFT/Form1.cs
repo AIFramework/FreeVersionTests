@@ -12,7 +12,7 @@ namespace FFT1
         public Form1()
         {
             InitializeComponent();
-            t = Vector.Time0(512, 1);
+            t = Vector.Time0(128*4096, 1);
             signal = Signal.Sin(t, 4);
             signal2 = Signal.Rect(t, 4);
         }
