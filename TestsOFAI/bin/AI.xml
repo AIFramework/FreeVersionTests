@@ -796,6 +796,410 @@
             2*pi
             </summary>
         </member>
+        <member name="T:AI.DataStructs.BinarySerializaterDataInMemory">
+            <summary>
+            Класс для бинарной сериализации объектов(Вся обработка данных ведется в оператиной памяти)
+            </summary>
+        </member>
+        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IV">
+            <summary>
+            Вектор инициализации алгоритма AES
+            </summary>
+        </member>
+        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.Salt">
+            <summary>
+            Криптосоль
+            </summary>
+        </member>
+        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IsZipped">
+            <summary>
+            Сжатие
+            </summary>
+        </member>
+        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IsCrypt">
+            <summary>
+            Шифровано
+            </summary>
+        </member>
+        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IsRead">
+            <summary>
+            Для чтения
+            </summary>
+        </member>
+        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IsWrite">
+            <summary>
+            Для записи
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.#ctor">
+            <summary>
+            Класс для бинарной сериализации объектов (открыть для записи)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.#ctor(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Класс для бинарной сериализации объектов (создать для чтения)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.#ctor(System.Byte[],System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Класс для бинарной сериализации объектов (создать для чтения)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.#ctor(System.IO.Stream,System.Boolean,System.Boolean)">
+            <summary>
+            Класс для бинарной сериализации объектов (создать для чтения)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int32)">
+            <summary>
+            Добавить число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int16)">
+            <summary>
+            Добавить число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Double)">
+            <summary>
+            Добавить число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Single)">
+            <summary>
+            Добавить число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int64)">
+            <summary>
+            Добавить число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.String)">
+            <summary>
+            Добавление строки(utf-8)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.String)">
+            <summary>
+            Добавление строки(utf-8)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.String,System.Text.Encoding)">
+            <summary>
+            Добавление строки 
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.String,System.Text.Encoding)">
+            <summary>
+            Добавление строки 
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(AI.ML.NeuralNetwork.CoreNNW.NNValue,System.Boolean)">
+            <summary>
+            Добавление данных нейросети
+            </summary>
+            <param name="value">Данные нейросети</param>
+            <param name="isAll">Читать данные производых</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(AI.Vector)">
+            <summary>
+            Добавление вектора (Только данные)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(AI.ML.NeuralNetwork.CoreNNW.NNValue,System.Boolean)">
+            <summary>
+            Добавление данных нейросети
+            </summary>
+            <param name="value">Данные нейросети</param>
+            <param name="isAll">Читать данные производых</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(AI.Vector)">
+            <summary>
+            Добавление вектора
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Byte[])">
+            <summary>
+            Добавить массив байт
+            </summary>
+            <param name="arr">Массив</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Double[])">
+            <summary>
+            Добавить массив double
+            </summary>
+            <param name="arr">Массив</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Single[])">
+            <summary>
+            Добавить массив float
+            </summary>
+            <param name="arr">Массив</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int32[])">
+            <summary>
+            Добавить массив int
+            </summary>
+            <param name="arr">Массив</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int16[])">
+            <summary>
+            Добавить массив short
+            </summary>
+            <param name="arr">Массив</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int64[])">
+            <summary>
+            Добавить массив short
+            </summary>
+            <param name="arr">Массив</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Char[])">
+            <summary>
+            Добавить массив char
+            </summary>
+            <param name="arr">Массив</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Double[])">
+            <summary>
+            Добавить только данные(Массив double)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Single[])">
+            <summary>
+            Добавить только данные(Массив float)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Int32[])">
+            <summary>
+            Добавить только данные(Массив int)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Int64[])">
+            <summary>
+            Добавить только данные(Массив long)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Int16[])">
+            <summary>
+            Добавить только данные(Массив short)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Char[])">
+            <summary>
+            Добавить только данные(Массив букв)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadInt">
+            <summary>
+            Прочитать число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadLong">
+            <summary>
+            Прочитать число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadShort">
+            <summary>
+            Прочитать число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadDouble">
+            <summary>
+            Прочитать число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadFloat">
+            <summary>
+            Прочитать число
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadVector">
+            <summary>
+            Чтение вектора
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadString">
+            <summary>
+            Чтение строки utf-8
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadString(System.Text.Encoding)">
+            <summary>
+            Чтение строки в произвольной кодировке
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadNNValue(System.Boolean)">
+            <summary>
+            Чтение в NNValue
+            </summary>
+            <param name="isAll">Читать данные производых</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadBytes">
+            <summary>
+            Прочитать массив байт
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadDoubles">
+            <summary>
+            Прочитать массив
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadFloats">
+            <summary>
+            Прочитать массив
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadInts">
+            <summary>
+            Прочитать массив
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadShorts">
+            <summary>
+            Прочитать массив
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadLongs">
+            <summary>
+            Прочитать массив
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadChars">
+            <summary>
+            Прочитать массив
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataDoubleArray(System.Int32)">
+            <summary>
+            Чтение только данных массива
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataFloatArray(System.Int32)">
+            <summary>
+            Чтение только данных массива
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataIntArray(System.Int32)">
+            <summary>
+            Чтение только данных массива
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataLongArray(System.Int32)">
+            <summary>
+            Чтение только данных массива
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataShortArray(System.Int32)">
+            <summary>
+            Чтение только данных массива
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataCharArray(System.Int32)">
+            <summary>
+            Чтение только данных массива
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataNNValue(System.Int32,System.Boolean)">
+            <summary>
+            Добавление данных нейросети
+            </summary>
+            <param name="isAll">Читать данные производых</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyData(System.Int32)">
+            <summary>
+            Добавление вектора (Только данные)
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Zipped">
+            <summary>
+            Сжать данные
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.UnZipped">
+            <summary>
+            Разархивировать
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Encrypt(System.String)">
+            <summary>
+            Зашифровать
+            </summary>
+            <param name="password">Пароль</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Decrypt(System.String)">
+            <summary>
+            Расшифровать
+            </summary>
+            <param name="password">Пароль</param>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Save(System.String)">
+            <summary>
+            Сохранение в файл
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.InitFromBts(System.Byte[],System.Boolean,System.Boolean,System.Boolean)">
+            <summary>
+            Инициализация массивом байт
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ToByteArray">
+            <summary>
+            Перевод в массив байт
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ToMemoryStream">
+            <summary>
+            Перевод в поток памяти
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ToString">
+            <summary>
+            Перевод в строку base64
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.FromBase64String(System.String,System.Boolean,System.Boolean)">
+            <summary>
+            Класс для бинарной сериализации объектов (создать для чтения) из строки формата base64
+            </summary>
+        </member>
+        <member name="T:AI.DataStructs.IBinSerial">
+            <summary>
+            Объект с поддержкой бинарной сериализации
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.IBinSerial.GetBts">
+            <summary>
+            Запись объекта в массив байт
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.IBinSerial.FromBts(System.Byte[])">
+            <summary>
+            Инициализация объекта массивом байт
+            </summary>
+            <param name="bts">byte array</param>
+        </member>
+        <member name="T:AI.DataStructs.TableOfContentsOfTheSortedVector">
+            <summary>
+            Оглавление сортированного вектора
+            </summary>
+        </member>
+        <member name="M:AI.DataStructs.TableOfContentsOfTheSortedVector.#ctor(AI.Vector,System.Int32)">
+            <summary>
+            Оглавление сортированного вектора
+            </summary>
+            <param name="vect">Сортированный вектор</param>
+            <param name="numCh">Число глав</param>
+        </member>
+        <member name="M:AI.DataStructs.TableOfContentsOfTheSortedVector.IndexValueNeighborhoodMin(System.Double)">
+            <summary>
+            Ближайший минимальный индекс
+            </summary>
+            <param name="value">Значение</param>
+        </member>
         <member name="T:AI.AlgebraicStructureFunctions`1">
             <summary>
             Transformation of algebraic structures
@@ -2334,410 +2738,6 @@
             <param name="bitmap">Картинка</param>
             <param name="newW">Новая ширина</param>
             <param name="newH">Новая высота</param>
-        </member>
-        <member name="T:AI.DataStructs.BinarySerializaterDataInMemory">
-            <summary>
-            Класс для бинарной сериализации объектов(Вся обработка данных ведется в оператиной памяти)
-            </summary>
-        </member>
-        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IV">
-            <summary>
-            Вектор инициализации алгоритма AES
-            </summary>
-        </member>
-        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.Salt">
-            <summary>
-            Криптосоль
-            </summary>
-        </member>
-        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IsZipped">
-            <summary>
-            Сжатие
-            </summary>
-        </member>
-        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IsCrypt">
-            <summary>
-            Шифровано
-            </summary>
-        </member>
-        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IsRead">
-            <summary>
-            Для чтения
-            </summary>
-        </member>
-        <member name="P:AI.DataStructs.BinarySerializaterDataInMemory.IsWrite">
-            <summary>
-            Для записи
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.#ctor">
-            <summary>
-            Класс для бинарной сериализации объектов (открыть для записи)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.#ctor(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Класс для бинарной сериализации объектов (создать для чтения)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.#ctor(System.Byte[],System.Boolean,System.Boolean,System.Boolean)">
-            <summary>
-            Класс для бинарной сериализации объектов (создать для чтения)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.#ctor(System.IO.Stream,System.Boolean,System.Boolean)">
-            <summary>
-            Класс для бинарной сериализации объектов (создать для чтения)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int32)">
-            <summary>
-            Добавить число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int16)">
-            <summary>
-            Добавить число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Double)">
-            <summary>
-            Добавить число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Single)">
-            <summary>
-            Добавить число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int64)">
-            <summary>
-            Добавить число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.String)">
-            <summary>
-            Добавление строки(utf-8)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.String)">
-            <summary>
-            Добавление строки(utf-8)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.String,System.Text.Encoding)">
-            <summary>
-            Добавление строки 
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.String,System.Text.Encoding)">
-            <summary>
-            Добавление строки 
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(AI.ML.NeuralNetwork.CoreNNW.NNValue,System.Boolean)">
-            <summary>
-            Добавление данных нейросети
-            </summary>
-            <param name="value">Данные нейросети</param>
-            <param name="isAll">Читать данные производых</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(AI.Vector)">
-            <summary>
-            Добавление вектора (Только данные)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(AI.ML.NeuralNetwork.CoreNNW.NNValue,System.Boolean)">
-            <summary>
-            Добавление данных нейросети
-            </summary>
-            <param name="value">Данные нейросети</param>
-            <param name="isAll">Читать данные производых</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(AI.Vector)">
-            <summary>
-            Добавление вектора
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Byte[])">
-            <summary>
-            Добавить массив байт
-            </summary>
-            <param name="arr">Массив</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Double[])">
-            <summary>
-            Добавить массив double
-            </summary>
-            <param name="arr">Массив</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Single[])">
-            <summary>
-            Добавить массив float
-            </summary>
-            <param name="arr">Массив</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int32[])">
-            <summary>
-            Добавить массив int
-            </summary>
-            <param name="arr">Массив</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int16[])">
-            <summary>
-            Добавить массив short
-            </summary>
-            <param name="arr">Массив</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Int64[])">
-            <summary>
-            Добавить массив short
-            </summary>
-            <param name="arr">Массив</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Add(System.Char[])">
-            <summary>
-            Добавить массив char
-            </summary>
-            <param name="arr">Массив</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Double[])">
-            <summary>
-            Добавить только данные(Массив double)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Single[])">
-            <summary>
-            Добавить только данные(Массив float)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Int32[])">
-            <summary>
-            Добавить только данные(Массив int)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Int64[])">
-            <summary>
-            Добавить только данные(Массив long)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Int16[])">
-            <summary>
-            Добавить только данные(Массив short)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.AddOnlyData(System.Char[])">
-            <summary>
-            Добавить только данные(Массив букв)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadInt">
-            <summary>
-            Прочитать число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadLong">
-            <summary>
-            Прочитать число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadShort">
-            <summary>
-            Прочитать число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadDouble">
-            <summary>
-            Прочитать число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadFloat">
-            <summary>
-            Прочитать число
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadVector">
-            <summary>
-            Чтение вектора
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadString">
-            <summary>
-            Чтение строки utf-8
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadString(System.Text.Encoding)">
-            <summary>
-            Чтение строки в произвольной кодировке
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadNNValue(System.Boolean)">
-            <summary>
-            Чтение в NNValue
-            </summary>
-            <param name="isAll">Читать данные производых</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadBytes">
-            <summary>
-            Прочитать массив байт
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadDoubles">
-            <summary>
-            Прочитать массив
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadFloats">
-            <summary>
-            Прочитать массив
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadInts">
-            <summary>
-            Прочитать массив
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadShorts">
-            <summary>
-            Прочитать массив
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadLongs">
-            <summary>
-            Прочитать массив
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadChars">
-            <summary>
-            Прочитать массив
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataDoubleArray(System.Int32)">
-            <summary>
-            Чтение только данных массива
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataFloatArray(System.Int32)">
-            <summary>
-            Чтение только данных массива
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataIntArray(System.Int32)">
-            <summary>
-            Чтение только данных массива
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataLongArray(System.Int32)">
-            <summary>
-            Чтение только данных массива
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataShortArray(System.Int32)">
-            <summary>
-            Чтение только данных массива
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataCharArray(System.Int32)">
-            <summary>
-            Чтение только данных массива
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyDataNNValue(System.Int32,System.Boolean)">
-            <summary>
-            Добавление данных нейросети
-            </summary>
-            <param name="isAll">Читать данные производых</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ReadOnlyData(System.Int32)">
-            <summary>
-            Добавление вектора (Только данные)
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Zipped">
-            <summary>
-            Сжать данные
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.UnZipped">
-            <summary>
-            Разархивировать
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Encrypt(System.String)">
-            <summary>
-            Зашифровать
-            </summary>
-            <param name="password">Пароль</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Decrypt(System.String)">
-            <summary>
-            Расшифровать
-            </summary>
-            <param name="password">Пароль</param>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.Save(System.String)">
-            <summary>
-            Сохранение в файл
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.InitFromBts(System.Byte[],System.Boolean,System.Boolean,System.Boolean)">
-            <summary>
-            Инициализация массивом байт
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ToByteArray">
-            <summary>
-            Перевод в массив байт
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ToMemoryStream">
-            <summary>
-            Перевод в поток памяти
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.ToString">
-            <summary>
-            Перевод в строку base64
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.BinarySerializaterDataInMemory.FromBase64String(System.String,System.Boolean,System.Boolean)">
-            <summary>
-            Класс для бинарной сериализации объектов (создать для чтения) из строки формата base64
-            </summary>
-        </member>
-        <member name="T:AI.DataStructs.IBinSerial">
-            <summary>
-            Объект с поддержкой бинарной сериализации
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.IBinSerial.GetBts">
-            <summary>
-            Запись объекта в массив байт
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.IBinSerial.FromBts(System.Byte[])">
-            <summary>
-            Инициализация объекта массивом байт
-            </summary>
-            <param name="bts">byte array</param>
-        </member>
-        <member name="T:AI.DataStructs.TableOfContentsOfTheSortedVector">
-            <summary>
-            Оглавление сортированного вектора
-            </summary>
-        </member>
-        <member name="M:AI.DataStructs.TableOfContentsOfTheSortedVector.#ctor(AI.Vector,System.Int32)">
-            <summary>
-            Оглавление сортированного вектора
-            </summary>
-            <param name="vect">Сортированный вектор</param>
-            <param name="numCh">Число глав</param>
-        </member>
-        <member name="M:AI.DataStructs.TableOfContentsOfTheSortedVector.IndexValueNeighborhoodMin(System.Double)">
-            <summary>
-            Ближайший минимальный индекс
-            </summary>
-            <param name="value">Значение</param>
         </member>
         <member name="T:AI.DSP.Analyse.FrequencyResponse">
             <summary>
@@ -5557,6 +5557,648 @@
             <param name="b"></param>
             <returns></returns>
         </member>
+        <member name="M:AI.ML.Datasets.DataSetSingle.#ctor(AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей без входных данных
+            </summary>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetSingle.Init(AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Инициализация класса
+            </summary>
+            <param name="inputs">Входные данные</param>
+            <param name="outputs">Идеальные выходы</param>
+            <param name="los">Ошибка</param>
+            <param name="valSplit">Доля выборки для валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.ML.NeuralNetwork.ComplexNet.NNComplexValue[],AI.ML.NeuralNetwork.ComplexNet.NNComplexValue[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Vector[],AI.Vector[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Matrix[],AI.Matrix[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Tensor[],AI.Tensor[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Tensor[],AI.Vector[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Vector[],AI.Matrix[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Tensor[],AI.Matrix[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Matrix[],AI.Tensor[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Matrix[],AI.Vector[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Vector[],AI.Tensor[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.Init(AI.ML.NeuralNetwork.ComplexNet.NNComplexValue[],AI.ML.NeuralNetwork.ComplexNet.NNComplexValue[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
+            <summary>
+            Инициализация класса
+            </summary>
+            <param name="inputs">Входные данные</param>
+            <param name="outputs">Идеальные выходы</param>
+            <param name="los">Ошибка</param>
+            <param name="valSplit">Доля выборки для валидации</param>
+        </member>
+        <member name="T:AI.ML.Datasets.DataSetReccurent">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Vector}[],System.Collections.Generic.List{AI.Vector}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Matrix}[],System.Collections.Generic.List{AI.Matrix}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Tensor}[],System.Collections.Generic.List{AI.Tensor}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+             <summary>
+            Датасет для рекуррентных нейросетей
+             </summary>
+             <param name="inputs">Входы</param>
+             <param name="outputs">Выходы</param>
+             <param name="los">Функция ошибки</param>
+             <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Tensor}[],System.Collections.Generic.List{AI.Vector}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Vector}[],System.Collections.Generic.List{AI.Matrix}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Tensor}[],System.Collections.Generic.List{AI.Matrix}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Matrix}[],System.Collections.Generic.List{AI.Tensor}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Matrix}[],System.Collections.Generic.List{AI.Vector}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Vector}[],System.Collections.Generic.List{AI.Tensor}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для рекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetReccurent.Init(System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Инициализация класса
+            </summary>
+            <param name="inputs">Входные данные</param>
+            <param name="outputs">Идеальные выходы</param>
+            <param name="los">Ошибка</param>
+            <param name="valSplit">Доля выборки для валидации</param>
+        </member>
+        <member name="T:AI.ML.Datasets.ExtensionOfFeatureSpace">
+            <summary>
+            Расширение пространства признаков
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Polinomial(System.Double,System.Int32)">
+            <summary>
+            Раширение пространства признаков полиномиальной ф-ей
+            </summary>
+            <param name="x">Вход</param>
+            <param name="n">степень полинома</param>
+            <returns>Новый вектор</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Polinomial(AI.Vector,System.Int32)">
+            <summary>
+            Раширение пространства признаков полиномиальной ф-ей
+            </summary>
+            <param name="inp">Вход</param>
+            <param name="n">степень полинома</param>
+            <returns>Новый вектор</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Cos(System.Double,System.Int32)">
+            <summary>
+            Раширение пространства признаков косинусами
+            </summary>
+            <param name="x">Вход</param>
+            <param name="n">Число гармоник</param>
+            <returns>Новый вектор</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Sin(System.Double,System.Int32)">
+            <summary>
+            Раширение пространства признаков синусами 
+            </summary>
+            <param name="x">Вход</param>
+            <param name="n">Число гармоник</param>
+            <returns>Новый вектор</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.SinCos(System.Double,System.Int32)">
+            <summary>
+            Раширение пространства признаков синусами и косинусами
+            </summary>
+            <param name="x">Вход</param>
+            <param name="n">Число гармоник</param>
+            <returns>Новый вектор</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Cos(AI.Vector,System.Int32)">
+            <summary>
+            Раширение пространства признаков косинусами
+            </summary>
+            <param name="inp">Вход</param>
+            <param name="n">Число гармоник</param>
+            <returns>Новый вектор</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.PoliCos(AI.Vector,System.Int32,System.Int32)">
+            <summary>
+            Расширение пространства с помощью полиномиальных ф-й и потом косинусов
+            </summary>
+            <param name="x">Вход</param>
+            <param name="nPolinom">Степень полинома</param>
+            <param name="nCos">Кол-во косинусов</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.PoliCos(System.Double,System.Int32,System.Int32)">
+            <summary>
+            Расширение пространства с помощью полиномиальных ф-й и потом косинусов
+            </summary>
+            <param name="x">Вход</param>
+            <param name="nPolinom">Степень полинома</param>
+            <param name="nCos">Кол-во косинусов</param>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.GaussRBF(System.Double,AI.Vector,System.Double)">
+            <summary>
+            Радиально-базисная ф-я Гаусса
+            </summary>
+            <param name="x">Вход</param>
+            <param name="centers">Массив центров</param>
+            <param name="std">СКО</param>
+            <returns>Вектор значений от 0 до 1</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Sinc(System.Double,AI.Vector)">
+            <summary>
+            Синус Котельникова sin(x)/x
+            </summary>
+            <param name="x"></param>
+            <param name="centers"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.ImportanceSign(AI.Vector[])">
+            <summary>
+            
+            </summary>
+            <param name="dataset"></param>
+            <returns></returns>
+        </member>
+        <member name="T:AI.ML.Datasets.MatrixInt">
+            <summary>
+            Датасет с картинками матрица-нормер класса
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.MatrixInt.GetRandMatrixIntSemple">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AI.ML.Datasets.MatrixIntSemple">
+            <summary>
+            Элемент датасета (матрица - номер класса)
+            </summary>
+        </member>
+        <member name="P:AI.ML.Datasets.MatrixIntSemple.matrix">
+            <summary>
+            Матрица
+            </summary>
+        </member>
+        <member name="P:AI.ML.Datasets.MatrixIntSemple.classNum">
+            <summary>
+            Номер класса
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.MatrixIntSemple.#ctor">
+            <summary>
+            Элемент датасета (матрица - номер класса)
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.MatrixIntSemple.#ctor(AI.Matrix,System.Int32)">
+            <summary>
+            Элемент датасета (матрица - номер класса)
+            </summary>
+            <param name="matr">Матрица</param>
+            <param name="numClass">Номер класса</param>
+        </member>
+        <member name="T:AI.ML.Datasets.MatrixVector">
+            <summary>
+            Коллекция(датасет) матрица-вектор
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.MatrixVector.MatrixVectorSempleRand">
+            <summary>
+            random instance
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:AI.ML.Datasets.MatrixVectorSemple">
+            <summary>
+            Матрица-вектор
+            </summary>
+        </member>
+        <member name="F:AI.ML.Datasets.MatrixVectorSemple.matrix">
+            <summary>
+            Матрица
+            </summary>
+        </member>
+        <member name="F:AI.ML.Datasets.MatrixVectorSemple.vector">
+            <summary>
+            Вектор
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.MatrixVectorSemple.#ctor(AI.Matrix,AI.Vector)">
+            <summary>
+            Матрица-вектор
+            </summary>
+            <param name="matr">Матрица</param>
+            <param name="vect">Вектор</param>
+        </member>
+        <member name="T:AI.ML.Datasets.SignalProcessingDataset">
+            <summary>
+            Датасет для задач ЦОС
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.SignalProcessingDataset.#ctor(AI.Vector[],AI.Vector[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для задач ЦОС
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.SignalProcessingDataset.Init(System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Инициализация класса
+            </summary>
+            <param name="inputs">Входные данные</param>
+            <param name="outputs">Идеальные выходы</param>
+            <param name="los">Ошибка</param>
+            <param name="valSplit">Доля выборки для валидации</param>
+        </member>
+        <member name="T:AI.ML.Datasets.VectorClass">
+            <summary>
+            Представляет структуру вектор-класс
+            </summary>
+        </member>
+        <member name="F:AI.ML.Datasets.VectorClass.InpVector">
+            <summary>
+            Вектор для классификации
+            </summary>
+        </member>
+        <member name="F:AI.ML.Datasets.VectorClass.ClassMark">
+            <summary>
+            Метка класса
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorClass.#ctor(AI.Vector,System.Int32)">
+            <summary>
+            Представляет структуру вектор-класс
+            </summary>
+            <param name="vector">Вектор</param>
+            <param name="mark">Метка класса</param>
+        </member>
+        <member name="T:AI.ML.Datasets.VectorIntDataset">
+            <summary>
+            Датасет
+            </summary>
+        </member>
+        <member name="F:AI.ML.Datasets.VectorIntDataset.mean">
+            <summary>
+            Средний вектор
+            </summary>
+        </member>
+        <member name="F:AI.ML.Datasets.VectorIntDataset.disp">
+            <summary>
+            Дисперсия по выборке
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.#ctor(System.String)">
+            <summary>
+            Загрузка датасета из файла
+            </summary>
+            <param name="path">Путь</param>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.#ctor">
+            <summary>
+            Датасет
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.#ctor(System.Int32)">
+            <summary>
+            Датасет
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.GetRandomData">
+            <summary>
+            Случайный представитель датасета
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.CorrMatrFeatures">
+            <summary>
+            Корреляционная матрица признаков
+            </summary>
+            <returns>Нормированная кор. матрица</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.DispMeanResult">
+            <summary>
+            Получение вектора дисперсии и среднего вектора
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.Normalise">
+            <summary>
+            Нормализация датасета
+            </summary>
+            <returns>Датасет</returns>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.GetDatasetDelSim(System.Double)">
+            <summary>
+            Удаление похожих векторов из разных классов
+            </summary>
+            <param name="simCoef">Коэффициент схожести</param>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.CsvToVid(System.String,System.Char)">
+            <summary>
+            
+            </summary>
+            <param name="path"></param>
+            <param name="separator"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.CsvToVid(System.String,System.Int32,System.Char)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.VectorIntDataset.Save(System.String,System.Char)">
+            <summary>
+            Сохранение датасета
+            </summary>
+        </member>
+        <member name="T:AI.ML.Datasets.DataSetNoReccurent">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Vector[],AI.Vector[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Matrix[],AI.Matrix[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Tensor[],AI.Tensor[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Tensor[],AI.Vector[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Vector[],AI.Matrix[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Tensor[],AI.Matrix[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Matrix[],AI.Tensor[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Matrix[],AI.Vector[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Vector[],AI.Tensor[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Датасет для нерекуррентных нейросетей
+            </summary>
+            <param name="inputs">Входы</param>
+            <param name="outputs">Выходы</param>
+            <param name="los">Функция ошибки</param>
+            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
+        </member>
+        <member name="M:AI.ML.Datasets.DataSetNoReccurent.Init(AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
+            <summary>
+            Инициализация класса
+            </summary>
+            <param name="inputs">Входные данные</param>
+            <param name="outputs">Идеальные выходы</param>
+            <param name="los">Ошибка</param>
+            <param name="valSplit">Доля выборки для валидации</param>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.Architectures.GanNet.NGen">
+            <summary>
+            Noise generator
+            </summary>
+        </member>
+        <member name="T:AI.ML.NeuralNetwork.Architectures.ConvClassifier">
+            <summary>
+            Сверточный классификатор
+            </summary>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.Architectures.ConvClassifier.#ctor(AI.ML.NeuralNetwork.CoreNNW.Shape,System.Int32)">
+            <summary>
+            Сверточный классификатор
+            </summary>
+            <param name="shape">Форма тензора</param>
+            <param name="classes">Number of classes</param>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.Architectures.ConvClassifier.GetNNW">
+            <summary>
+            Получение нейронной сети
+            </summary>
+        </member>
+        <member name="T:AI.ML.NeuralNetwork.Architectures.IArchitecture">
+            <summary>
+            Классификатор 
+            </summary>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.Architectures.IArchitecture.GetNNW">
+            <summary>
+            Получение нейронной сети
+            </summary>
+        </member>
         <member name="M:AI.ML.NeuralNetwork.ComplexNet.Base.ICActiv.Forward(AI.ML.NeuralNetwork.ComplexNet.NNComplexValue)">
             <summary>
             Прямой проход
@@ -6653,33 +7295,6 @@
             <param name="network">Сеть</param>
             <param name="learningRate">Скорость обучения</param>
         </member>
-        <member name="T:AI.ML.NeuralNetwork.Architectures.ConvClassifier">
-            <summary>
-            Сверточный классификатор
-            </summary>
-        </member>
-        <member name="M:AI.ML.NeuralNetwork.Architectures.ConvClassifier.#ctor(AI.ML.NeuralNetwork.CoreNNW.Shape,System.Int32)">
-            <summary>
-            Сверточный классификатор
-            </summary>
-            <param name="shape">Форма тензора</param>
-            <param name="classes">Number of classes</param>
-        </member>
-        <member name="M:AI.ML.NeuralNetwork.Architectures.ConvClassifier.GetNNW">
-            <summary>
-            Получение нейронной сети
-            </summary>
-        </member>
-        <member name="T:AI.ML.NeuralNetwork.Architectures.IArchitecture">
-            <summary>
-            Классификатор 
-            </summary>
-        </member>
-        <member name="M:AI.ML.NeuralNetwork.Architectures.IArchitecture.GetNNW">
-            <summary>
-            Получение нейронной сети
-            </summary>
-        </member>
         <member name="T:AI.ML.NeuralNetwork.CoreNNW.Activations.AbsUnit">
             <summary>
             Активационная функция в виде модуля
@@ -6959,6 +7574,34 @@
             <param name="x">Тензор аргумента</param>
         </member>
         <member name="M:AI.ML.NeuralNetwork.CoreNNW.Activations.SigmoidUnit.ToString">
+            <summary>
+            Имя функции
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AI.ML.NeuralNetwork.CoreNNW.Activations.SigmoidWithBCE.Numerator">
+            <summary>
+            Числитель для инициализатора
+            </summary>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.CoreNNW.Activations.SigmoidWithBCE.#ctor">
+            <summary>
+            Сигмоидальная Activation function
+            </summary>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.CoreNNW.Activations.SigmoidWithBCE.Forward(AI.ML.NeuralNetwork.CoreNNW.NNValue)">
+            <summary>
+            Прямой проход
+            </summary>
+            <param name="x">Тензор аргумента</param>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.CoreNNW.Activations.SigmoidWithBCE.Backward(AI.ML.NeuralNetwork.CoreNNW.NNValue)">
+            <summary>
+            Обратный проход(производная)
+            </summary>
+            <param name="x">Тензор аргумента</param>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.CoreNNW.Activations.SigmoidWithBCE.ToString">
             <summary>
             Имя функции
             </summary>
@@ -10321,7 +10964,7 @@
             Метод Адам
             </summary>
         </member>
-        <member name="M:AI.ML.NeuralNetwork.CoreNNW.Optimizers.Adam.#ctor">
+        <member name="M:AI.ML.NeuralNetwork.CoreNNW.Optimizers.Adam.#ctor(System.Double,System.Double)">
             <summary>
             Адам
             </summary>
@@ -10650,6 +11293,103 @@
             </summary>
             <param name="filePath">Путь до файла</param>
             <param name="nnw">Нейросеть</param>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.GAN.Activate(AI.ML.NeuralNetwork.CoreNNW.NNValue)">
+            <summary>
+            Activate generator
+            </summary>
+            <param name="noize">Noize</param>
+            <returns></returns>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.GAN.Activate">
+            <summary>
+            Activate generator with Noize
+            </summary>
+            <returns>output of the generator</returns>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.GAN.ActivateDiscriminator(AI.ML.NeuralNetwork.CoreNNW.NNValue)">
+            <summary>
+            Activate discriminator
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.GAN.GenerateNoize">
+            <summary>
+            Generator of the noize
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.L2Regularization">
+            <summary>
+            Коэффициент L2 регуляризации, если он равен 0 L2 регуляризации нет
+            </summary>
+        </member>
+        <member name="P:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.L1Regularization">
+            <summary>
+            Коэффициент L1 регуляризации, если он равен 0 L2 регуляризации нет
+            </summary>
+        </member>
+        <member name="P:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.BatchSize">
+            <summary>
+            Размер мини-пакета
+            </summary>
+        </member>
+        <member name="P:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.TrainTypeSetting">
+            <summary>
+            Тип обучение, онлайн, офлайн или мини пакетный
+            </summary>
+        </member>
+        <member name="P:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.TrainOptimizer">
+            <summary>
+            Метод обчения SGD, Adam и т.п.
+            </summary>
+        </member>
+        <member name="P:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.RandomSeed">
+            <summary>
+            Сид для генератора случайных чисел
+            </summary>
+        </member>
+        <member name="F:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.GradientClipValue">
+            <summary>
+            Ограничение грандиента, чтобы избежать взрыва градиента, по умолчанию 3
+            </summary>
+        </member>
+        <member name="P:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.Info">
+            <summary>
+            Информация об обучении НС
+            </summary>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.#ctor(AI.ML.NeuralNetwork.CoreNNW.Models.IGraph,AI.ML.NeuralNetwork.CoreNNW.TrainType,AI.ML.NeuralNetwork.CoreNNW.Train.IOptimizer,System.Double,System.Double)">
+            <summary>
+            Создание "учителя" для нейросети
+            </summary> 
+            <param name="graph">Граф автодифференцирования</param>
+            <param name="trainType">Тип обучения</param>
+            <param name="optimizer">Метод обучения</param>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.Train(System.Int32,System.Double,AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.GAN,AI.ML.NeuralNetwork.CoreNNW.DataStructs.DataSet,System.Double)">
+            <summary>
+            Обучение сети
+            </summary>
+            <param name="trainingEpochs">Число эпох</param>
+            <param name="learningRate">Скорость обучения</param>
+            <param name="network">Нейронная сеть</param>
+            <param name="data">Набор данных(датасет)</param>
+            <param name="minLoss">Значение ошибки при которой останавливается обучение</param>
+            <returns>Ошибка</returns>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.PassOnline(System.Double,AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.GAN,System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.DataStructs.DataSequence},System.Boolean,AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss)">
+            <summary>
+            Онлайн обучение
+            </summary>
+        </member>
+        <member name="M:AI.ML.NeuralNetwork.GenerativeAdversarialNetwork.Trainer.UpdateModelParams(AI.ML.NeuralNetwork.CoreNNW.Layers.INetwork,System.Double)">
+            <summary>
+            Обновление весов
+            </summary>
+            <param name="network">Сеть</param>
+            <param name="learningRate">Скорость обучения</param>
         </member>
         <member name="T:AI.ML.NeuralNetwork.HopfieldNet">
             <summary>
@@ -11110,599 +11850,6 @@
             Строковое представление
             </summary>
             <returns></returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.ML.NeuralNetwork.ComplexNet.NNComplexValue[],AI.ML.NeuralNetwork.ComplexNet.NNComplexValue[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Vector[],AI.Vector[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Matrix[],AI.Matrix[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Tensor[],AI.Tensor[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Tensor[],AI.Vector[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Vector[],AI.Matrix[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Tensor[],AI.Matrix[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Matrix[],AI.Tensor[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Matrix[],AI.Vector[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.#ctor(AI.Vector[],AI.Tensor[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ComplexDatasetNoRecurrent.Init(AI.ML.NeuralNetwork.ComplexNet.NNComplexValue[],AI.ML.NeuralNetwork.ComplexNet.NNComplexValue[],AI.ML.NeuralNetwork.ComplexNet.Base.ICLoss,System.Double)">
-            <summary>
-            Инициализация класса
-            </summary>
-            <param name="inputs">Входные данные</param>
-            <param name="outputs">Идеальные выходы</param>
-            <param name="los">Ошибка</param>
-            <param name="valSplit">Доля выборки для валидации</param>
-        </member>
-        <member name="T:AI.ML.Datasets.DataSetReccurent">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Vector}[],System.Collections.Generic.List{AI.Vector}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Matrix}[],System.Collections.Generic.List{AI.Matrix}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Tensor}[],System.Collections.Generic.List{AI.Tensor}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-             <summary>
-            Датасет для рекуррентных нейросетей
-             </summary>
-             <param name="inputs">Входы</param>
-             <param name="outputs">Выходы</param>
-             <param name="los">Функция ошибки</param>
-             <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Tensor}[],System.Collections.Generic.List{AI.Vector}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Vector}[],System.Collections.Generic.List{AI.Matrix}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Tensor}[],System.Collections.Generic.List{AI.Matrix}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Matrix}[],System.Collections.Generic.List{AI.Tensor}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Matrix}[],System.Collections.Generic.List{AI.Vector}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.#ctor(System.Collections.Generic.List{AI.Vector}[],System.Collections.Generic.List{AI.Tensor}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для рекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetReccurent.Init(System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Инициализация класса
-            </summary>
-            <param name="inputs">Входные данные</param>
-            <param name="outputs">Идеальные выходы</param>
-            <param name="los">Ошибка</param>
-            <param name="valSplit">Доля выборки для валидации</param>
-        </member>
-        <member name="T:AI.ML.Datasets.ExtensionOfFeatureSpace">
-            <summary>
-            Расширение пространства признаков
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Polinomial(System.Double,System.Int32)">
-            <summary>
-            Раширение пространства признаков полиномиальной ф-ей
-            </summary>
-            <param name="x">Вход</param>
-            <param name="n">степень полинома</param>
-            <returns>Новый вектор</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Polinomial(AI.Vector,System.Int32)">
-            <summary>
-            Раширение пространства признаков полиномиальной ф-ей
-            </summary>
-            <param name="inp">Вход</param>
-            <param name="n">степень полинома</param>
-            <returns>Новый вектор</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Cos(System.Double,System.Int32)">
-            <summary>
-            Раширение пространства признаков косинусами
-            </summary>
-            <param name="x">Вход</param>
-            <param name="n">Число гармоник</param>
-            <returns>Новый вектор</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Sin(System.Double,System.Int32)">
-            <summary>
-            Раширение пространства признаков синусами 
-            </summary>
-            <param name="x">Вход</param>
-            <param name="n">Число гармоник</param>
-            <returns>Новый вектор</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.SinCos(System.Double,System.Int32)">
-            <summary>
-            Раширение пространства признаков синусами и косинусами
-            </summary>
-            <param name="x">Вход</param>
-            <param name="n">Число гармоник</param>
-            <returns>Новый вектор</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Cos(AI.Vector,System.Int32)">
-            <summary>
-            Раширение пространства признаков косинусами
-            </summary>
-            <param name="inp">Вход</param>
-            <param name="n">Число гармоник</param>
-            <returns>Новый вектор</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.PoliCos(AI.Vector,System.Int32,System.Int32)">
-            <summary>
-            Расширение пространства с помощью полиномиальных ф-й и потом косинусов
-            </summary>
-            <param name="x">Вход</param>
-            <param name="nPolinom">Степень полинома</param>
-            <param name="nCos">Кол-во косинусов</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.PoliCos(System.Double,System.Int32,System.Int32)">
-            <summary>
-            Расширение пространства с помощью полиномиальных ф-й и потом косинусов
-            </summary>
-            <param name="x">Вход</param>
-            <param name="nPolinom">Степень полинома</param>
-            <param name="nCos">Кол-во косинусов</param>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.GaussRBF(System.Double,AI.Vector,System.Double)">
-            <summary>
-            Радиально-базисная ф-я Гаусса
-            </summary>
-            <param name="x">Вход</param>
-            <param name="centers">Массив центров</param>
-            <param name="std">СКО</param>
-            <returns>Вектор значений от 0 до 1</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.Sinc(System.Double,AI.Vector)">
-            <summary>
-            Синус Котельникова sin(x)/x
-            </summary>
-            <param name="x"></param>
-            <param name="centers"></param>
-            <returns></returns>
-        </member>
-        <member name="M:AI.ML.Datasets.ExtensionOfFeatureSpace.ImportanceSign(AI.Vector[])">
-            <summary>
-            
-            </summary>
-            <param name="dataset"></param>
-            <returns></returns>
-        </member>
-        <member name="T:AI.ML.Datasets.MatrixInt">
-            <summary>
-            Датасет с картинками матрица-нормер класса
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.MatrixInt.GetRandMatrixIntSemple">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:AI.ML.Datasets.MatrixIntSemple">
-            <summary>
-            Элемент датасета (матрица - номер класса)
-            </summary>
-        </member>
-        <member name="P:AI.ML.Datasets.MatrixIntSemple.matrix">
-            <summary>
-            Матрица
-            </summary>
-        </member>
-        <member name="P:AI.ML.Datasets.MatrixIntSemple.classNum">
-            <summary>
-            Номер класса
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.MatrixIntSemple.#ctor">
-            <summary>
-            Элемент датасета (матрица - номер класса)
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.MatrixIntSemple.#ctor(AI.Matrix,System.Int32)">
-            <summary>
-            Элемент датасета (матрица - номер класса)
-            </summary>
-            <param name="matr">Матрица</param>
-            <param name="numClass">Номер класса</param>
-        </member>
-        <member name="T:AI.ML.Datasets.MatrixVector">
-            <summary>
-            Коллекция(датасет) матрица-вектор
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.MatrixVector.MatrixVectorSempleRand">
-            <summary>
-            random instance
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="T:AI.ML.Datasets.MatrixVectorSemple">
-            <summary>
-            Матрица-вектор
-            </summary>
-        </member>
-        <member name="F:AI.ML.Datasets.MatrixVectorSemple.matrix">
-            <summary>
-            Матрица
-            </summary>
-        </member>
-        <member name="F:AI.ML.Datasets.MatrixVectorSemple.vector">
-            <summary>
-            Вектор
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.MatrixVectorSemple.#ctor(AI.Matrix,AI.Vector)">
-            <summary>
-            Матрица-вектор
-            </summary>
-            <param name="matr">Матрица</param>
-            <param name="vect">Вектор</param>
-        </member>
-        <member name="T:AI.ML.Datasets.SignalProcessingDataset">
-            <summary>
-            Датасет для задач ЦОС
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.SignalProcessingDataset.#ctor(AI.Vector[],AI.Vector[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для задач ЦОС
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.SignalProcessingDataset.Init(System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],System.Collections.Generic.List{AI.ML.NeuralNetwork.CoreNNW.NNValue}[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Инициализация класса
-            </summary>
-            <param name="inputs">Входные данные</param>
-            <param name="outputs">Идеальные выходы</param>
-            <param name="los">Ошибка</param>
-            <param name="valSplit">Доля выборки для валидации</param>
-        </member>
-        <member name="T:AI.ML.Datasets.VectorClass">
-            <summary>
-            Представляет структуру вектор-класс
-            </summary>
-        </member>
-        <member name="F:AI.ML.Datasets.VectorClass.InpVector">
-            <summary>
-            Вектор для классификации
-            </summary>
-        </member>
-        <member name="F:AI.ML.Datasets.VectorClass.ClassMark">
-            <summary>
-            Метка класса
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorClass.#ctor(AI.Vector,System.Int32)">
-            <summary>
-            Представляет структуру вектор-класс
-            </summary>
-            <param name="vector">Вектор</param>
-            <param name="mark">Метка класса</param>
-        </member>
-        <member name="T:AI.ML.Datasets.VectorIntDataset">
-            <summary>
-            Датасет
-            </summary>
-        </member>
-        <member name="F:AI.ML.Datasets.VectorIntDataset.mean">
-            <summary>
-            Средний вектор
-            </summary>
-        </member>
-        <member name="F:AI.ML.Datasets.VectorIntDataset.disp">
-            <summary>
-            Дисперсия по выборке
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.#ctor(System.String)">
-            <summary>
-            Загрузка датасета из файла
-            </summary>
-            <param name="path">Путь</param>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.#ctor">
-            <summary>
-            Датасет
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.#ctor(System.Int32)">
-            <summary>
-            Датасет
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.GetRandomData">
-            <summary>
-            Случайный представитель датасета
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.CorrMatrFeatures">
-            <summary>
-            Корреляционная матрица признаков
-            </summary>
-            <returns>Нормированная кор. матрица</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.DispMeanResult">
-            <summary>
-            Получение вектора дисперсии и среднего вектора
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.Normalise">
-            <summary>
-            Нормализация датасета
-            </summary>
-            <returns>Датасет</returns>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.GetDatasetDelSim(System.Double)">
-            <summary>
-            Удаление похожих векторов из разных классов
-            </summary>
-            <param name="simCoef">Коэффициент схожести</param>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.CsvToVid(System.String,System.Char)">
-            <summary>
-            
-            </summary>
-            <param name="path"></param>
-            <param name="separator"></param>
-            <returns></returns>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.CsvToVid(System.String,System.Int32,System.Char)">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.VectorIntDataset.Save(System.String,System.Char)">
-            <summary>
-            Сохранение датасета
-            </summary>
-        </member>
-        <member name="T:AI.ML.Datasets.DataSetNoReccurent">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Vector[],AI.Vector[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Matrix[],AI.Matrix[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Tensor[],AI.Tensor[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Tensor[],AI.Vector[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Vector[],AI.Matrix[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Tensor[],AI.Matrix[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Matrix[],AI.Tensor[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Matrix[],AI.Vector[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.#ctor(AI.Vector[],AI.Tensor[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Датасет для нерекуррентных нейросетей
-            </summary>
-            <param name="inputs">Входы</param>
-            <param name="outputs">Выходы</param>
-            <param name="los">Функция ошибки</param>
-            <param name="valSplit">Какая часть выборки будет использована при валидации</param>
-        </member>
-        <member name="M:AI.ML.Datasets.DataSetNoReccurent.Init(AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.NNValue[],AI.ML.NeuralNetwork.CoreNNW.Loss.ILoss,System.Double)">
-            <summary>
-            Инициализация класса
-            </summary>
-            <param name="inputs">Входные данные</param>
-            <param name="outputs">Идеальные выходы</param>
-            <param name="los">Ошибка</param>
-            <param name="valSplit">Доля выборки для валидации</param>
         </member>
         <member name="T:AI.ML.ML.Datasets.Img2Img">
             <summary>

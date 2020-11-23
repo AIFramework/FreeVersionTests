@@ -30,10 +30,10 @@ namespace NeuralNet.Tests
             NNW.AddNewLayer(new Shape(n), new FeedForwardLayer(100, new ReLU(0.1)));
             NNW.AddNewLayer(new ReShape(new Shape(10, 1, 2))); // Разделение на реальную и мнимую часть
             NNW.AddNewLayer(new BatchReNormalization());
-            NNW.AddNewLayer(new FeedComplexLayer(900, new EliotSigUnit()));// Комплексный слой
-            NNW.AddNewLayer(new DropOut(0.9));
+            NNW.AddNewLayer(new FeedComplexLayer(1000, new EliotSigUnit()));// Комплексный слой
+            NNW.AddNewLayer(new DropOut(0.85));
             NNW.AddNewLayer(new Flatten()); // Соединение реальной и мнимой части
-            NNW.AddNewLayer(new FeedForwardLayer(outp, new SoftmaxUnit()));
+            NNW.AddNewLayer(new FeedForwardLayer(outp, new SigmoidWithBCE()));
             Console.WriteLine(NNW);
         }
 
@@ -56,7 +56,7 @@ namespace NeuralNet.Tests
         private void button2_Click(object sender, EventArgs e)
         {
             GetData();
-            DataSetNoReccurent DatasetNo = new DataSetNoReccurent(x, y, new LossMSE(), 0.4);
+            DataSetNoReccurent DatasetNo = new DataSetNoReccurent(x, y, new CrossEntropy(), 0.4);
             Trainer trainer = new Trainer(new GraphCPU(), TrainType.Online, new Adam());
             trainer.Train(8, 0.001, NNW, DatasetNo, 0.0006);
         }

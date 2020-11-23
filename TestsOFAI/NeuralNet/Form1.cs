@@ -27,5 +27,11 @@ namespace NeuralNet
             ImitComplex imitComplex = new ImitComplex();
             imitComplex.Show();
         }
+
+        private void linkLabel4_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            GanDemo ganDemo = new GanDemo();
+            ganDemo.Show();
+        }
     }
 }
