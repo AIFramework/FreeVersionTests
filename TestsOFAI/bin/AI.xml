@@ -14835,21 +14835,6 @@
             <param name="input">Строка входа</param>
             <param name="target">Целевая строка</param>
         </member>
-        <member name="T:AI.NLP.ProbabilityDictionaryData">
-            <summary>
-            Данные вероятностного словаря
-            </summary>
-        </member>
-        <member name="P:AI.NLP.ProbabilityDictionaryData.Word">
-            <summary>
-            Слово
-            </summary>
-        </member>
-        <member name="P:AI.NLP.ProbabilityDictionaryData.Probability">
-            <summary>
-            Вероятность встретить это слово
-            </summary>
-        </member>
         <member name="T:AI.NLP.ProbabilityDictionary">
             <summary>
             Вероятностный словарь
@@ -15071,6 +15056,21 @@
         <member name="M:AI.NLP.HMMNextWord.#ctor(System.String,System.Double)">
             <summary>
             Слово
+            </summary>
+        </member>
+        <member name="T:AI.NLP.ProbabilityDictionaryData">
+            <summary>
+            Данные вероятностного словаря
+            </summary>
+        </member>
+        <member name="P:AI.NLP.ProbabilityDictionaryData.Word">
+            <summary>
+            Слово
+            </summary>
+        </member>
+        <member name="P:AI.NLP.ProbabilityDictionaryData.Probability">
+            <summary>
+            Вероятность встретить это слово
             </summary>
         </member>
         <member name="T:AI.NLP.ProbabilityDictionaryHash">
@@ -15420,6 +15420,20 @@
             <param name="word1"></param>
             <param name="word2"></param>
             <returns></returns>
+        </member>
+        <member name="T:AI.NLP.TextTokenizer">
+            <summary>
+            Class for tokenizing text
+            </summary>
+        </member>
+        <member name="M:AI.NLP.TextTokenizer.#ctor(System.Boolean,System.Boolean,System.Char[],System.String[])">
+            <summary>
+            Class for tokenizing text
+            </summary>
+            <param name="isLower">Whether to convert text to lowercase</param>
+            <param name="isStem">Whether to stem the text</param>
+            <param name="deleted">Deleted characters (default [',' ';' '*' '?' '!' '.'])  </param>
+            <param name="separaters">Characters or strings to separate words (default ["\t" " " "\n"])</param>
         </member>
         <member name="T:AI.NLP.WordToSemantic">
             <summary>
